@@ -56,4 +56,5 @@
 .logout {
   color: rgba(181, 206, 255, 0.6);
   font-size: 20px;
+  cursor: pointer;
 }

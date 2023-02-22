@@ -1,6 +1,7 @@
 .login {
   display: flex;
   justify-content: center;
+  margin: auto;
 }
 
 .h1 {
@@ -41,10 +42,12 @@
   color: white;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .div1 {
   color: aliceblue;
+  cursor: pointer;
 }
 
 .a {
