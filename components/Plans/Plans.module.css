@@ -1,6 +1,11 @@
+.plansWrapper {
+  height: 100vh;
+}
+
 .header {
   height: 60px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.224);
+  margin-bottom: 50px;
 }
 
 .margin {
@@ -10,6 +15,10 @@
   margin-top: 10px;
   margin-left: 20px;
   margin-right: 40px;
+}
+
+.span1 {
+  font-size: 14px;
 }
 
 .logo {
@@ -31,6 +40,8 @@
 
 .main {
   display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .mainMargin {

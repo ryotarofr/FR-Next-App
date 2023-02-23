@@ -36,20 +36,21 @@ const LoginPage = () => {
   }
 
   return (<>
-    <Box
-      sx={{
-        backgroundImage: `url(${path})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        overflow: "hidden",
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <div className={styles.login}>
+    <div className={styles.login}>
+      <Box
+        sx={{
+          backgroundImage: `url(${path})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          overflow: "hidden",
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+
         <form onSubmit={handleSubmit(onSubmit)}>
           {toggle ? (<h1 className={styles.h1}>Sign Up</h1>) : (<h1 className={styles.h1}>Sign In</h1>)}
 
@@ -96,10 +97,11 @@ const LoginPage = () => {
 
           </div>
         </form>
-      </div>
-      {/* <LoginButton type="button" onClick={signInWithGithub}>ログイン</LoginButton>
+
+        {/* <LoginButton type="button" onClick={signInWithGithub}>ログイン</LoginButton>
     <LoginButton type="button" onClick={logout}>ログアウト</LoginButton> */}
-    </Box>
+      </Box>
+    </div>
   </>)
 }
 

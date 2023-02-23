@@ -29,11 +29,7 @@ function Plans({ products }: Props) {
   }
 
   return (
-    <div>
-      {/* <Head>
-        <title>Netflix</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head> */}
+    <div className={styles.plansWrapper}>
       <header className={styles.header}>
         <div className={styles.margin}>
           <Link href="/">
@@ -54,8 +50,8 @@ function Plans({ products }: Props) {
 
       <main className={styles.main}>
         <div className={styles.mainMargin}>
-          <h1 className="mb-3 text-3xl font-medium">
-            プランを選択してください
+          <h1>
+            プランを選択してください<span className={styles.span1}>（現在はシングルプランです）</span>
           </h1>
           <ul>
             <li className="flex items-center gap-x-2 text-lg">
