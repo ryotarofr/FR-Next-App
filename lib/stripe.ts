@@ -13,7 +13,7 @@ const payments = getStripePayments(app, {
 
 const loadCheckout = async (priceId: string) => {
   await createCheckoutSession(payments, {
-    price: priceId,
+    price: "price_1MeBZdEo3ybXapbbStJiy1TG",
     success_url: window.location.origin,
     cancel_url: window.location.origin,
   })
