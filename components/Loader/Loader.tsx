@@ -1,8 +1,11 @@
-function Loader({ color }: { color: string }) {
+import styles from "./Loader.module.css"
+
+function Loader() {
   return (
     <svg
       role="status"
-      className={`m-auto h-7 w-7 animate-spin text-gray-200 dark:text-transparent ${color}`}
+      className={styles.svg}
+      // className={`m-auto h-7 w-7 animate-spin text-gray-200 dark:text-transparent ${color}`}
       viewBox="0 0 100 101"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

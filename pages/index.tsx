@@ -43,11 +43,12 @@ export default function Home({ products }: Props) {
         </p>
         <div className={styles.description}>
           <p>
-            Get started by editing&nbsp;
+            The current directory is&nbsp;
             <code className={styles.code}>pages/index.tsx</code>
           </p>
           <div>
-            <a
+            <div className={styles.created}>By&nbsp;<span className={styles.fr}>Fujii</span><span className={styles.dev}>.R</span></div>
+            {/* <a
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
@@ -61,7 +62,7 @@ export default function Home({ products }: Props) {
                 height={24}
                 priority
               />
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -158,36 +159,8 @@ export const getServerSideProps = async () => {
     .then((res) => res)
     .catch((error) => console.log(error.message))
 
-  // const [
-  //   netflixOriginals,
-  //   trendingNow,
-  //   topRated,
-  //   actionMovies,
-  //   comedyMovies,
-  //   horrorMovies,
-  //   romanceMovies,
-  //   documentaries,
-  // ] = await Promise.all([
-  //   fetch(requests.fetchNetflixOriginals).then((res) => res.json()),
-  //   fetch(requests.fetchTrending).then((res) => res.json()),
-  //   fetch(requests.fetchTopRated).then((res) => res.json()),
-  //   fetch(requests.fetchActionMovies).then((res) => res.json()),
-  //   fetch(requests.fetchComedyMovies).then((res) => res.json()),
-  //   fetch(requests.fetchHorrorMovies).then((res) => res.json()),
-  //   fetch(requests.fetchRomanceMovies).then((res) => res.json()),
-  //   fetch(requests.fetchDocumentaries).then((res) => res.json()),
-  // ])
-
   return {
     props: {
-      // netflixOriginals: netflixOriginals.results,
-      // trendingNow: trendingNow.results,
-      // topRated: topRated.results,
-      // actionMovies: actionMovies.results,
-      // comedyMovies: comedyMovies.results,
-      // horrorMovies: horrorMovies.results,
-      // romanceMovies: romanceMovies.results,
-      // documentaries: documentaries.results,
       products,
     },
   }

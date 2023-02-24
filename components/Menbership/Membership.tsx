@@ -3,7 +3,7 @@ import { useState } from 'react'
 import useAuth from '../../hooks/useAuth'
 import useSubscription from '../../hooks/useSubscription'
 import { goToBillingPortal } from '../../lib/stripe'
-import Loader from '../Loader'
+import Loader from '../Loader/Loader'
 
 
 function Membership() {
@@ -21,8 +21,8 @@ function Membership() {
   console.log(subscription)
 
   return (
-    <div className="mt-6 grid grid-cols-1 gap-x-4 border px-4 md:grid-cols-4 md:border-x-0 md:border-t md:border-b-0 md:px-0">
-      <div className="space-y-2 py-4">
+    <div className={styles.membershipWrapper}>
+      <div className={styles.flexWrapper}>
         <h4 className={styles.h4}>メンバーシップ && サブスクリプション登録</h4>
         <button
           disabled={isBillingLoading || !subscription}
@@ -30,26 +30,24 @@ function Membership() {
           onClick={manageSubscription}
         >
           {isBillingLoading ? (
-            <Loader color="dark:fill-[#e50914]" />
+            <Loader />
           ) : (
             'Cancel Membership'
           )}
         </button>
       </div>
 
-      <div className="col-span-3">
-        <div className="flex flex-col justify-between border-b border-white/10 py-4 md:flex-row">
+      <div className={styles.detailItems}>
+        <div className={styles.flexItems}>
           <div>
-            <p className="font-medium">Email：{user?.email}</p>
-            <p className="text-[gray]">Password： ********</p>
+            <p className={styles.email}>Email：{user?.email}</p>
+            <p className={styles.password}>Password： ********</p>
           </div>
           <div className="md:text-right">
-            {/* <p className="membershipLink">Change email</p>
-            <p className="membershipLink">Change password</p> */}
           </div>
         </div>
 
-        <div className="flex flex-col justify-between pt-4 pb-4 md:flex-row md:pb-0">
+        <div>
           <div>
             <p>
               {subscription?.cancel_at_period_end
@@ -58,12 +56,7 @@ function Membership() {
               {subscription?.current_period_end}
             </p>
           </div>
-          <div className="md:text-right">
-            {/* <p className="membershipLink">Manage payment info</p>
-            <p className="membershipLink">Add backup payment method</p>
-            <p className="membershipLink">Billing Details</p>
-            <p className="membershipLink">Change billing day</p> */}
-          </div>
+
         </div>
       </div>
     </div>

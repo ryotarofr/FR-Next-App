@@ -39,6 +39,17 @@
   font-family: var(--font-mono);
 }
 
+.fr {
+  font-size: 1.5rem;
+  color: black;
+  font-style: italic;
+}
+
+.dev {
+  color: blueviolet;
+  font-style: italic;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));

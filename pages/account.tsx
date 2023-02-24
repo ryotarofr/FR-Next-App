@@ -1,6 +1,8 @@
 import styles from "../styles/Account.module.css"
 import { getProducts, Product } from '@stripe/firestore-stripe-payments'
 import { GetStaticProps } from 'next'
+import { useRouter } from 'next/router';
+import { IoIosArrowBack } from 'react-icons/io';
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -14,80 +16,60 @@ interface Props {
 }
 
 function Account({ products }: Props) {
-  console.log(products)
+  const router = useRouter()
   const { user, logout, loading } = useAuth()
   const subscription = useSubscription(user)
   const [isBillingLoading, setBillingLoading] = useState(false)
 
   if (loading) return null
-
-  console.log(subscription)
   return (
-    <div className={styles.wrapper}>
-      <Head>
-        <title>Account Settings - Netflix</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <header className={`bg-[#141414]`}>
-        <Link href="/">
-          {/* <img
-            src="https://rb.gy/ulxxee"
-            width={120}
-            height={120}
-            className="cursor-pointer object-contain"
-          /> */}
-        </Link>
-        <Link href="/account">
-          {/* <img
-            src="https://rb.gy/g1pwyx"
-            alt=""
-            className="cursor-pointer rounded"
-          /> */}
-        </Link>
-      </header>
-      <main className={styles.main}>
-        <div className={styles.mainMargin}>
-          <div className={styles.mainFlex}>
-            <h1 className={styles.account}>Account</h1>
-            <div className={styles.items}>
+    <div className={styles.account}>
+      <div className={styles.back} onClick={() => router.back()}><IoIosArrowBack className={styles.backIcon} />back</div>
+      <div className={styles.wrapper}>
+        <main className={styles.main}>
+          <div className={styles.mainMargin}>
+            <div className={styles.mainFlex}>
+              <h1 className={styles.account}>Account</h1>
+              <div className={styles.items}>
 
-              <p className={styles.created}>
-                メンバー登録日： {subscription?.created}
-              </p>
+                <p className={styles.created}>
+                  メンバー登録日： {subscription?.created}
+                </p>
+              </div>
             </div>
-          </div>
-          <hr className={styles.hr} />
-          <Membership />
-          <hr className={styles.hr} />
-          <div className={styles.plan}>
-            <h4 className={styles.planDetail}>プラン詳細</h4>
-            {/* Find the current plan */}
-            <div className={styles.planName}>
-              {
-                products.filter(
-                  (product) => product.id === subscription?.product
-                )[0]?.name
-              }
-            </div>
-            {/* <p
+            <hr className={styles.hr} />
+            <Membership />
+            <hr className={styles.hr} />
+            <div className={styles.plan}>
+              <h4 className={styles.planDetail}>プラン詳細</h4>
+              {/* Find the current plan */}
+              <div className={styles.planName}>
+                {
+                  products.filter(
+                    (product) => product.id === subscription?.product
+                  )[0]?.name
+                }
+              </div>
+              {/* <p
               className="cursor-pointer text-blue-500 hover:underline md:text-right"
               onClick={goToBillingPortal}
             >
               Change plan
             </p> */}
+            </div>
+            <hr className={styles.hr} />
+            <div className={styles.settings}>
+              <h4 className={styles.settingDetail}>設定</h4>
+              <p
+                className={styles.logout}
+                onClick={logout}
+              >
+                SignOut
+              </p>
+            </div>
           </div>
-          <hr className={styles.hr} />
-          <div className={styles.settings}>
-            <h4 className={styles.settingDetail}>設定</h4>
-            <p
-              className={styles.logout}
-              onClick={logout}
-            >
-              SignOut
-            </p>
-          </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   )
 }
@@ -114,6 +96,7 @@ export const getStaticProps: GetStaticProps = async () => {
 // import { User } from '@/types/User';
 // import { useForm } from 'react-hook-form'
 // import LoginButton from '../components/Login';
+
 
 
 

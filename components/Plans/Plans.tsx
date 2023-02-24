@@ -4,11 +4,12 @@ import { Product } from '@stripe/firestore-stripe-payments'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
+import { TbChecks } from 'react-icons/tb'
 import useAuth from '../../hooks/useAuth'
 import { loadCheckout } from '../../lib/stripe'
 import Table from '../Table/Table'
-import Loader from '../Loader'
-// import { Radio } from "@mui/material"
+import Loader from '../Loader/Loader'
+
 
 interface Props {
   products: Product[]
@@ -54,15 +55,18 @@ function Plans({ products }: Props) {
             プランを選択してください<span className={styles.span1}>（現在はシングルプランです）</span>
           </h1>
           <ul>
-            <li className="flex items-center gap-x-2 text-lg">
+            <li className={styles.list}>
+              <TbChecks />
               {/* <CheckIcon className="h-7 w-7 text-[#E50914]" /> Watch all you want. */}
               コンテンツの購読が自由にできます。
             </li>
-            <li className="flex items-center gap-x-2 text-lg">
+            <li className={styles.list}>
+              <TbChecks />
               {/* <CheckIcon className="h-7 w-7 text-[#E50914]" /> Recommendations */}
               あなたへおすすめを紹介します。
             </li>
-            <li className="flex items-center gap-x-2 text-lg">
+            <li className={styles.list}>
+              <TbChecks />
               {/* <CheckIcon className="h-7 w-7 text-[#E50914]" /> Change or cancel */}
               いつでも解約可能です。
             </li>
@@ -91,12 +95,12 @@ function Plans({ products }: Props) {
 
             <button
               disabled={!selectedPlan || isBillingLoading}
-              className={styles.subscribe
+              className={selectedPlan ? styles.subscribe : styles.subscribeNone
               }
               onClick={subscribeToPlan}
             >
               {isBillingLoading ? (
-                <Loader color="dark:fill-gray-300" />
+                <Loader />
               ) : (
                 'Subscribe'
               )}
