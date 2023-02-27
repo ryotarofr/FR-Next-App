@@ -39,6 +39,23 @@
   font-family: var(--font-mono);
 }
 
+.toggleIcon {
+  position: relative;
+  top: 6px;
+  width: 20px;
+  height: 20px;
+}
+
+.subCode {
+  color: gray;
+  font-family: var(--font-mono);
+  cursor: pointer;
+}
+.subCode:hover {
+  font-weight: 700;
+  color: black;
+}
+
 .fr {
   font-size: 1.5rem;
   color: black;
