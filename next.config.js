@@ -2,4 +2,14 @@
 module.exports = {
   // nextConfig,
   transpilePackages: ["@stripe/firestore-stripe-payments"],
+  // svgを使うための記述
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ["@svgr/webpack"],
+    });
+
+    return config;
+  },
 };

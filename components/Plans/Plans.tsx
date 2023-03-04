@@ -48,66 +48,73 @@ function Plans({ products }: Props) {
           </p>
         </div>
       </header>
+      <div className={styles.plansFlex}>
 
-      <main className={styles.main}>
-        <div className={styles.mainMargin}>
-          <h1>
-            プランを選択してください<span className={styles.span1}>（現在はシングルプランです）</span>
-          </h1>
-          <ul>
-            <li className={styles.list}>
-              <TbChecks />
-              {/* <CheckIcon className="h-7 w-7 text-[#E50914]" /> Watch all you want. */}
-              コンテンツの購読が自由にできます。
-            </li>
-            <li className={styles.list}>
-              <TbChecks />
-              {/* <CheckIcon className="h-7 w-7 text-[#E50914]" /> Recommendations */}
-              あなたへおすすめを紹介します。
-            </li>
-            <li className={styles.list}>
-              <TbChecks />
-              {/* <CheckIcon className="h-7 w-7 text-[#E50914]" /> Change or cancel */}
-              いつでも解約可能です。
-            </li>
-          </ul>
 
-          <div className="mt-4 flex flex-col space-y-4">
-            <div className="flex w-full items-center justify-end self-end md:w-3/5">
-              {products.map((product) => (
-                <>
-                  <div className={styles.productFlex}>
-                    <input
-                      type="radio"
-                      className={styles.radio}
-                      key={product.id}
-                      onClick={() => setSelectedPlan(product)}
-                    />
-                    {/* {product.name}s */}
+        <main className={styles.main}>
+          <div className={styles.mainMargin}>
+            <h1>
+              プランを選択してください<span className={styles.span1}>（現在はシングルプランです）</span>
+            </h1>
+            <ul>
+              <li className={styles.list}>
+                <TbChecks />
+                {/* <CheckIcon className="h-7 w-7 text-[#E50914]" /> Watch all you want. */}
+                コンテンツの購読が自由にできます。
+              </li>
+              <li className={styles.list}>
+                <TbChecks />
+                {/* <CheckIcon className="h-7 w-7 text-[#E50914]" /> Recommendations */}
+                あなたへおすすめを紹介します。
+              </li>
+              <li className={styles.list}>
+                <TbChecks />
+                {/* <CheckIcon className="h-7 w-7 text-[#E50914]" /> Change or cancel */}
+                いつでも解約可能です。
+              </li>
+            </ul>
 
-                    <div className={styles.productName}>{product.name}</div>
-                  </div>
-                </>
-              ))}
+            <div className="mt-4 flex flex-col space-y-4">
+              <div className="flex w-full items-center justify-end self-end md:w-3/5">
+
+                {products.map((product) => (
+                  <>
+                    <div className={styles.productFlex}>
+                      <input
+                        type="radio"
+                        className={styles.radio}
+                        key={product.id}
+                        onClick={() => setSelectedPlan(product)}
+                      />
+
+                      <div className={styles.productName}>{product.name}</div>
+                      <div>
+
+                      </div>
+                    </div>
+                  </>
+                ))}
+                <div className={styles.push}>↑--push radio--↑</div>
+              </div>
+              <hr />
+              <Table products={products} selectedPlan={selectedPlan} />
+
+              <button
+                disabled={!selectedPlan || isBillingLoading}
+                className={selectedPlan ? styles.subscribe : styles.subscribeNone
+                }
+                onClick={subscribeToPlan}
+              >
+                {isBillingLoading ? (
+                  <Loader />
+                ) : (
+                  'Subscribe'
+                )}
+              </button>
             </div>
-            <hr />
-            <Table products={products} selectedPlan={selectedPlan} />
-
-            <button
-              disabled={!selectedPlan || isBillingLoading}
-              className={selectedPlan ? styles.subscribe : styles.subscribeNone
-              }
-              onClick={subscribeToPlan}
-            >
-              {isBillingLoading ? (
-                <Loader />
-              ) : (
-                'Subscribe'
-              )}
-            </button>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   )
 }

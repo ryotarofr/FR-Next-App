@@ -4,7 +4,11 @@ import styles from "../styles/Login.module.css"
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { AiOutlineUser } from "react-icons/ai"
 import { RiLockPasswordLine } from "react-icons/ri"
+import { AiFillGithub } from "react-icons/ai"
+import { FcGoogle } from "react-icons/fc"
 import useAuth from '../hooks/useAuth'
+import { Button } from '@mui/material';
+import { log } from 'console';
 
 
 
@@ -15,10 +19,11 @@ interface Inputs {
 
 const LoginPage = () => {
   const [login, setLogin] = useState(true)
-  const { signIn, signUp } = useAuth()
+  const { signIn, signUp, signInWithGithub, signInWithGoogle } = useAuth()
 
   const [toggle, setToggle] = useState(false)
   const toggleBool = () => setToggle(!toggle)
+
 
 
   const {
@@ -92,8 +97,11 @@ const LoginPage = () => {
 
             </div>
           </form>
-          {/* <LoginButton type="button" onClick={signInWithGithub}>ログイン</LoginButton>
-    <LoginButton type="button" onClick={logout}>ログアウト</LoginButton> */}
+          <div className={styles.h1}>Sign In</div>
+          <AiFillGithub className={styles.providerButton} onClick={signInWithGithub} />
+          <FcGoogle className={styles.providerButton} onClick={signInWithGoogle} />
+          {/* <LoginButton className={styles.providerButton} type="button" onClick={signInWithGithub}><AiFillGithub onClick={signInWithGithub} /></LoginButton> */}
+          {/* <LoginButton type="button" onClick={logout}>ログアウト</LoginButton> */}
         </div>
       </div>
     </div>

@@ -1,13 +1,26 @@
 .plansWrapper {
-  height: 100vh;
+  height: 170vh;
   width: 100vw;
   background-image: url(../../public/assets/plans_bg.png);
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 20px;
+}
+
+.plansFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
   height: 60px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   color: whitesmoke;
+}
+
+.main {
+  padding-bottom: 40px;
 }
 
 .margin {
@@ -17,6 +30,7 @@
   padding-top: 40px;
   margin-left: 30px;
   margin-right: 40px;
+  margin-bottom: 20px;
 }
 
 .span1 {
@@ -70,7 +84,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .radio {
@@ -83,6 +97,12 @@
   font-size: 26px;
   font-weight: 600;
   font-style: italic;
+}
+
+.push {
+  text-align: center;
+  padding-bottom: 20px;
+  color: rgb(72, 255, 194);
 }
 
 .subscribe {

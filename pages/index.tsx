@@ -11,6 +11,12 @@ import payments from '../lib/stripe'
 import useSubscription from '../hooks/useSubscription'
 import Plans from '../components/Plans/Plans'
 
+// test import 
+import Svg1 from "../public/test.svg"
+import Svg2 from "../public/homeback.svg"
+import Svg3 from "../public/frdev2.svg"
+import Svg4 from "../public/one.svg"
+import Svg5 from "../public/message.svg"
 
 
 
@@ -82,17 +88,22 @@ export default function Home({ products }: Props) {
             </a> */}
           </div>
         </div>
-
+        {/* <Svg1 className={styles.svg1} />
+        <Svg2 className={styles.svg2} /> */}
         <div className={styles.center}>
-          <Image
+          {/* <Svg3 className={styles.svg3} /> */}
+          {/* <Svg5 className={styles.svg5} /> */}
+
+          {/* <Svg4 className={styles.svg4} /> */}
+          {/* <Image
             className={styles.logo}
-            src="/frdev.svg"
+            src="/frdev2.svg"
             alt="Next.js Logo"
             width={200}
             height={46}
             priority
-          />
-          <div className={styles.thirteen}>
+          /> */}
+          {/* <div className={styles.thirteen}>
             <Image
               src="/one.svg"
               alt="13"
@@ -100,7 +111,7 @@ export default function Home({ products }: Props) {
               height={41}
               priority
             />
-          </div>
+          </div> */}
         </div>
 
         <div className={styles.grid}>
@@ -161,6 +172,8 @@ export default function Home({ products }: Props) {
             </p>
           </a>
         </div>
+        <Svg1 className={styles.svg1} />
+        <Svg2 className={styles.svg2} />
       </main>
     </>
   )

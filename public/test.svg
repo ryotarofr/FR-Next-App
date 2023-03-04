@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 217.76 231.03">
+  <defs>
+    <style>
+      .rightArm {
+        stroke-width: .75px;
+        animation-name: rightArmAnimation;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+
+      }
+
+      @keyframes rightArmAnimation {
+        0% {}
+
+        50% {
+          transform: matrix(1.01, 0, 0, 1, 0, 0);
+        }
+
+        100% {
+          /* transform: matrix(0.95, -0.05, 0.2, 1, 0.1, 0.1); */
+          transform: matrix(1, 0, 0.2, 0.98, -16, -5);
+        }
+      }
+
+      .rightHand,
+      /* .rightFinger1, */
+      .rightFinger2 {
+
+        animation-name: rightHandAnimation;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+      }
+
+      @keyframes rightHandAnimation {
+        0% {}
+
+        50% {
+          transform: matrix(1.01, 0, 0, 1, 0, 0);
+
+        }
+
+        100% {
+          /* transform: matrix(0.95, -0.05, 0.2, 1, 0.1, 0.1); */
+          transform: matrix(1.02, 0, 0, 0.98, -20, -16) rotate(30deg) translateX(18px) translateY(-55px);
+          /* transform: rotate(45deg) */
+          /* transform: rotate(45deg) translateX(-20px) translateY(-90px); */
+        }
+      }
+
+      .rightFinger1 {
+        animation-name: rightFingerAnimation;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+      }
+
+      @keyframes rightFingerAnimation {
+        0% {}
+
+        50% {
+          transform: matrix(1.01, 0, 0, 1, 0, 0);
+
+        }
+
+        100% {
+          /* transform: matrix(0.95, -0.05, 0.2, 1, 0.1, 0.1); */
+          transform: matrix(1.01, 0, 0, 0.95, -21, -15) rotate(30deg) translateX(18px) translateY(-55px);
+          /* transform: rotate(45deg) */
+          /* transform: rotate(45deg) translateX(-20px) translateY(-90px); */
+        }
+      }
+
+      .leftLeg,
+      .leftLegLine {
+        /* transform: matrix(1, 0, 0, 1, 0, 0); */
+        animation-name: leftLegAnimation;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+      }
+
+      @keyframes leftLegAnimation {
+        0% {}
+
+        50% {
+          /* transform: matrix(0.99, -0.01, -0.02, 1.01, 3, 0); */
+          transform: matrix(1, -0.02, -0.03, 1.02, 2, 0);
+
+        }
+
+        100% {
+          transform: matrix(1.01, -0.01, 0, 1, 0, 0);
+        }
+      }
+
+      .leftLegUnder {
+        animation-name: leftLegUnderAnimation;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+      }
+
+      @keyframes leftLegUnderAnimation {
+        0% {}
+
+        50% {}
+
+        100% {
+          transform: matrix(1.01, -0.01, 0, 1, 1, 0);
+        }
+      }
+
+      .letfShoe,
+      .leftshoeLine {
+        animation-name: leftShoeAnimation;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in;
+        /* animation-delay: 1s; */
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+      }
+
+      @keyframes leftShoeAnimation {
+        0% {}
+
+        50% {
+          /* transform: matrix(1, -0.02, -0.03, 1.02, 2, 0); */
+          transform: matrix(1, -0.02, -0.02, 1.01, 2, 0) rotate(10deg) translateX(29px) translateY(-10px);
+        }
+
+        100% {
+          transform: matrix(0.98, 0, 0, 1, 0, 0) rotate(10deg) translateX(29px) translateY(-10px);
+        }
+      }
+
+      .shoulder,
+      .clothLine {
+        animation-name: shoulderAnimation;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+      }
+
+      @keyframes shoulderAnimation {
+        0% {}
+
+        100% {
+          transform: matrix(1.005, 0.003, 0, 1, 0, 0);
+        }
+      }
+
+      .leftArm {
+        animation-name: leftArmAnimation;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+      }
+
+      @keyframes leftArmAnimation {
+        0% {}
+
+        100% {
+          transform: matrix(1.01, 0.003, 0, 1, 1, 0);
+        }
+      }
+
+      .head,
+      .neck,
+      .nose {
+        animation-name: headAnimation;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+      }
+
+      @keyframes headAnimation {
+        0% {}
+
+        50% {
+          transform: matrix(1, 0.002, 0, 1, 1, 0) rotate(5deg) translateX(1px) translateY(-15px);
+        }
+
+        100% {
+          transform: matrix(1.01, 0.003, 0, 1, 1, 0) rotate(10deg) translateX(1px) translateY(-30px);
+          ;
+        }
+      }
+
+      .pc {
+        animation-name: pcAnimation;
+        animation-duration: 1s;
+        animation-timing-function: ease-in;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+      }
+
+      @keyframes pcAnimation {
+        0% {}
+
+        50% {
+          transform: matrix(1, 0.008, 0, 1, 0, 0)
+        }
+
+        100% {
+          transform: matrix(1, 0.004, 0, 1, 0, 0);
+        }
+      }
+
+      .rightArm,
+      .rightFinger1,
+      .rightHand,
+      .leftLeg,
+      .leftLegLine,
+      .leftLegUnder,
+      .letfShoe,
+      .leftshoeLine,
+      .shoulder,
+      .leftArm,
+      .head,
+      .neck .cls-2,
+      .cls-3,
+      .cls-4,
+      .cls-5,
+      .clothLine,
+      .cls-6,
+      .cls-7,
+      .rightFinger2,
+      .cls-9,
+      .cls-10,
+      .nose {
+        stroke-miterlimit: 10;
+      }
+
+      .rightArm,
+      .rightFinger1,
+      /* .rightHand, */
+      .leftLegLine,
+      .leftLeg,
+      .shoulder,
+      .leftArm,
+      .head,
+      .neck .cls-3,
+      .cls-5,
+      .clothLine,
+      .cls-7,
+      .rightFinger2,
+      .cls-10,
+      .nose {
+        stroke: #fff;
+      }
+
+      .cls-2,
+      .letfShoe,
+      .cls-4,
+      .leftshoeLine,
+      .leftLegUnder,
+      .cls-6,
+      .cls-9 {
+        stroke: #000;
+      }
+
+      .pc {
+        fill: #d6d6d6;
+      }
+
+      .leftLegLine,
+      .cls-4,
+      .leftLegUnder,
+      .clothLine,
+      .cls-5,
+      .cls-9,
+      .cls-10 {
+        fill: none;
+      }
+
+      .cls-4,
+      .cls-5,
+      .clothLine,
+      .nose {
+        stroke-linecap: round;
+      }
+
+      .cls-6,
+      .cls-7 {
+        fill: #fff;
+      }
+
+      .rightFinger1 {
+        stroke-width: .75px;
+      }
+
+      .rightFinger2,
+      .nose {
+        stroke-width: .5px;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+
+    <path class="rightArm" d="M114.74,33.1s-4.09,42.47-3.95,45.64h21.37s-7.6-45.62-9.33-49.05l-8.08,3.41Z" />
+    <path class="leftLeg"
+      d="M184.66,122.71c-1.33,4.21-3.1,6.42-14.84,18.61s-27.5,4.21-27.5,4.21l-51.14-30.79-34.78,45.86-19.72-13.73s34.09-59.73,42.51-65.77c8.42-6.04,21.58-2.37,21.58-2.37l55.89,26.11s2.37,1.73,5.18,1.51c.91-.35,1.38-.75,1.38-.75l13.51,11.38" />
+    <line class="cls-6" x1="165.63" y1="41.28" x2="165.92" y2="35.5" />
+    <path class="cls-6" d="M162.31,27.71c.54,.36,1.99,.48,2.23,.48" />
+    <path class="leftLegLine" d="M112.89,100.86s15.62,12.4,19.22,12.65" />
+    <path class="leftLegLine"
+      d="M50.2,156.27s1.16-1.57,3.07-4.13c7.68-10.29,27.45-36.65,32.72-42.14,6.57-6.85,14.51-2.08,14.51-2.08,0,0,37.07,14.63,44.76,16.72,7.69,2.09,15.25,1.88,22.19,1.13s9.28-8.82,9.28-8.82l7.93,5.75" />
+    <line class="leftLegLine" x1="39.06" y1="142.71" x2="53.27" y2="152.14" />
+    <path class="leftLegLine"
+      d="M104.83,123.44l.65-5.61s2.25-6.3,5.25,0l.83,9.66,1.63,.98s2.5-7.39,4.25-1.38c1.75,6.01,1.29,4.72,1.29,4.72l1.74,1.05s2.26-5.67,5.45-1.9c3.19,3.77,8.61,7.72,8.61,7.72,0,0,3.77,1.85,8.37,1.65" />
+    <path class="leftLegLine" d="M144.44,146.4s8.21-3.54,9.81-5.14" />
+    <path class="leftLegLine" d="M150.07,147.8s4.99-.87,7.12-3.97" />
+    <path class="leftLegLine" d="M159.49,126.3s-4.85,2.4-9.41,2.76" />
+    <path class="cls-3"
+      d="M109.6,141.03c.09,5.25-3.65,63.38-3.65,63.38h-25.47c-3.83-4.13-4.73-69.1-4.73-69.1l4.73-6.24,29.62,12.17" />
+    <path class="cls-5" d="M102.58,159.13s-1.71-5.15-3.42-2.86-4.98,16.24-4.13,32.33" />
+    <line class="cls-10" x1="78.57" y1="199.12" x2="94.9" y2="199.12" />
+    <path class="cls-5" d="M100.73,203.55s.14-6.55,.85-6.26" />
+    <path class="letfShoe"
+      d="M38.09,150.73l-31.18-2.93s-10.39,.08-4.7,5.78c5.7,5.7,39.3,26.2,39.3,26.2l11.77-15.23-.95-3.13-14.24-10.68,1.45-1.89" />
+    <line class="leftshoeLine" x1="54" y1="158.92" x2="52.32" y2="161.41" />
+    <path d="M84.31,207.31l-28.7,18.72s-4.56,5.39,6.02,4.98c10.58-.41,43.15-1.24,43.15-1.24v-22.46h-20.46Z" />
+    <line class="cls-9" x1="84.23" y1="203.55" x2="84.31" y2="207.31" />
+    <line class="cls-9" x1="103.13" y1="207.31" x2="103.13" y2="203.55" />
+    <path class="cls-7" d="M176.15,16.82s1.75,2.94,2.69,3.25" />
+    <path class="cls-7" d="M177.49,15.22s.64,1.65,1.4,2.21" />
+    <path class="leftLegUnder" d="M80.25,127.68l42.85,17.61s19.32,7.19,28.31,2.21" />
+    <line class="cls-5" x1="191.56" y1="92.71" x2="200.35" y2="93.3" />
+    <line class="cls-5" x1="204.37" y1="94.02" x2="217.26" y2="94.96" />
+    <path class="neck"
+      d="M176.8,21.53l-.26,6.24s-3,6.95-5.6,7.54c-2.66,.6-6.32,2.01-9.6-2.97-3.21-4.87-4.34-13.9-4.34-13.9l1.12-8.66,18.4,4.78,.28,6.97Z" />
+    <path class="nose" d="M164.42,22.01s-.54,4.34,0,4.7c.54,.36,1.99,.48,2.23,.48" />
+    <path class="head"
+      d="M178.95,24.04c-.55-.5-2.75-2.17-3.78-4.41-1.03-2.24-3.98-3.95-3.98-3.95,0,0-4.74,.73-5.52,3.24l.5-3.74s-4.97,1.17-5.46,4l.25-4s-4.92,2.85-5.66,5.71l.89-5.21s-3,1.92-4.33,5.21l-.93-.05c-.15-1.62,.92-9.55,3.21-13.09,2.28-3.54,7.31-6.4,13.71-7.2,6.4-.8,13.37,8.8,11.88,12.34-1.49,3.54-1.14,7.2-1.03,9.94,.11,2.74,6.84,15.04,6.84,15.04l-12.21,9.04" />
+    <path class="rightHand"
+      d="M123.61,31.97s-4.69-7.45-5.65-7.97c-.96-.52-2.06-2.92-6.85,1.46-4.79,4.38-8.45,7.26-8.4,8.01,.01,.23,.19,.62,.45,1.06,.58,1.01,1.55,2.25,1.83,2.25,.39,0,1.53,0,1.53,0,0,0,1.87-1.76,2.39-2.37" />
+    <path class="rightFinger1"
+      d="M109.06,33.77c-1.45,3.83,0,11.01,0,11.01,0,0,1.84,1.83,3.61-6.16,0,0,1.43-5.46,2.56-5.64,0,0,1.04-1.7,1.18,.52s.05,2.92,.88,4.1,1.79,.08,1.79,.08c0,0-.57-2.97,1.21-5.33" />
+    <line class="rightFinger2" x1="106.95" y1="31.47" x2="103.16" y2="34.53" />
+    <line class="rightFinger2" x1="107.81" y1="32.78" x2="104.1" y2="35.92" />
+    <polyline class="cls-10" points="188.27 94.36 188.94 99.76 148.12 88.28" />
+    <path class="shoulder"
+      d="M186.01,71.37l-1.35,23.16,32.6,1.94V54.03s-3.61-16.92-17.62-17.2c-14.01-.28-13.86,.48-13.86,.48l-12.21,9.04-7.95-5.42s-17.52,5-22.06,8.83c-4.54,3.83-13.09,11-13.9,12.47l5.54,32.55,55.65,11.08" />
+    <path class="clothLine" d="M198.7,43.69s13.89-1.55,16.01,3.61" />
+    <path class="clothLine"
+      d="M203.47,56.33s1.53-2.79,3.91-1.66c2.39,1.13-.86,9.69-3.91,12.21-3.05,2.52,5.57-2.12,5.44-.86-.13,1.26-2.45,9.02-4.84,10.62" />
+    <path class="clothLine" d="M211.92,57.29s.13,4.2-.28,5.4" />
+    <path class="clothLine" d="M212.6,68.84s-1.58,7.85-.96,9.54,3.23-2.94,2.21-.79c-1.02,2.15,.62,6.89-2.06,7.4" />
+    <path class="clothLine" d="M162.06,42.01s-.22,3.6,.58,5.07" />
+    <path class="clothLine"
+      d="M191.95,36.77s1.23,4.78-.61,7.06c-1.84,2.27-11.18,8.91-13.03,9.58s-3.44-3.01-3.44-3.01l-3.44,2.46s-4.24-3.13-5.04-5.28" />
+    <path class="clothLine" d="M163.72,41.5s-.04,2.85,.46,3.64" />
+    <path class="clothLine" d="M188.94,36.77s-5.43,11.82-10.55,12.28" />
+    <path class="leftArm"
+      d="M211.98,96.51s-3.8,37.14-26.54,26.11l-26.64-20.58v-7.55s26.68,7.54,27.37,8.66,3.84-2.76,3.9-8.29" />
+    <polygon class="pc" points="160.62 106.3 160.26 71.91 100.8 71.71 100.8 78.58 160.62 106.3" />
+
+  </g>
+</svg>

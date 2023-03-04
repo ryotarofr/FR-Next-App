@@ -2,6 +2,7 @@ import { auth } from '@/firebase/client'
 import {
   createUserWithEmailAndPassword,
   GithubAuthProvider,
+  GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
@@ -11,6 +12,8 @@ import {
 
 import { useRouter } from 'next/router'
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
+// import { signInWithGithub, signInWithGoogle } from '../lib/auth';
+
 
 
 interface IAuth {
@@ -18,6 +21,8 @@ interface IAuth {
   signUp: (email: string, password: string) => Promise<void>
   signIn: (email: string, password: string) => Promise<void>
   logout: () => Promise<void>
+  signInWithGithub: () => Promise<void>
+  signInWithGoogle: () => Promise<void>
   error: string | null
   loading: boolean
 }
@@ -27,6 +32,8 @@ const AuthContext = createContext<IAuth>({
   signUp: async () => { },
   signIn: async () => { },
   logout: async () => { },
+  signInWithGithub: async () => { },
+  signInWithGoogle: async () => { },
   error: null,
   loading: false,
 })
@@ -41,6 +48,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [error, setError] = useState(null)
   const [initialLoading, setInitialLoading] = useState(true)
   const [loading, setLoading] = useState(false)
+
 
   useEffect(
     () =>
@@ -75,19 +83,34 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   }
 
 
-  // const signInWithGithub = async () => {
-  //   setLoading(true)
-  //   const provider = new GithubAuthProvider()
-  //   await signInWithPopup(auth, provider)
-  //     .then((userCredential) => {
-  //       setUser(userCredential.user)
-  //       router.push('/')
-  //       setLoading(false)
-  //     })
-  //     .catch((error) => alert(error.message))
-  //     .finally(() => setLoading(false))
+  const signInWithGithub = async () => {
+    setLoading(true)
+    const provider = new GithubAuthProvider()
+    await signInWithPopup(auth, provider)
+      .then((userCredential) => {
+        setUser(userCredential.user)
+        router.push('/')
+        setLoading(false)
+        console.log(provider);
 
-  // }
+      })
+      .catch((error) => alert(error.message))
+      .finally(() => setLoading(false))
+
+  }
+  const signInWithGoogle = async () => {
+    setLoading(true)
+    const provider = new GoogleAuthProvider()
+    await signInWithPopup(auth, provider)
+      .then((userCredential) => {
+        setUser(userCredential.user)
+        router.push('/')
+        setLoading(false)
+      })
+      .catch((error) => alert(error.message))
+      .finally(() => setLoading(false))
+
+  }
 
   const signIn = async (email: string, password: string) => {
     setLoading(true)
@@ -113,7 +136,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   }
 
   const memoedValue = useMemo(
-    () => ({ user, signUp, signIn, error, loading, logout }),
+    () => ({ user, signUp, signIn, error, loading, logout, signInWithGithub, signInWithGoogle }),
     [user, loading, error]
   )
 
