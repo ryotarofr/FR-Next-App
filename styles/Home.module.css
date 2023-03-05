@@ -33,6 +33,12 @@
   right: 20px;
 } */
 /*  */
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
 .main {
   display: flex;
   flex-direction: column;

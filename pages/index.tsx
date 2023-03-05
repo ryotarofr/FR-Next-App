@@ -17,6 +17,7 @@ import Svg2 from "../public/homeback.svg"
 import Svg3 from "../public/frdev2.svg"
 import Svg4 from "../public/one.svg"
 import Svg5 from "../public/message.svg"
+import { Button } from '@mui/material';
 
 
 
@@ -37,6 +38,8 @@ export default function Home({ products }: Props) {
   if (loading || subscription === null) return null
 
   if (!subscription) return <Plans products={products} />
+
+
 
   return (
     <>
@@ -64,13 +67,16 @@ export default function Home({ products }: Props) {
                 ? <><RiToggleLine onClick={toggleBool} className={styles.toggleIcon} /></>
                 : <><RiToggleFill onClick={toggleBool} className={styles.toggleIcon} />
                   <Link href="/account" className={styles.subCode}>pages/account.tsx</Link>
-                  <Link href="/account" className={styles.subCode}>pages/account.tsx</Link></>}
+                  <Link href="/user" className={styles.subCode}>pages/user.tsx</Link></>}
 
 
             </code>
           </p>
           <div>
-            <div className={styles.created}>By&nbsp;<span className={styles.fr}>Fujii</span><span className={styles.dev}>.R</span></div>
+            <div className={styles.created}>
+              {/* for&nbsp;<span className={styles.fr}>{user?.email}</span> */}
+              <Link href='/user' className={styles.userInfo}>for&nbsp;<span className={styles.fr}>{user?.email}</span></Link>
+            </div>
             {/* <a
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
