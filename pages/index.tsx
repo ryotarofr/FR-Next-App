@@ -18,6 +18,9 @@ import Svg3 from "../public/frdev2.svg"
 import Svg4 from "../public/one.svg"
 import Svg5 from "../public/message.svg"
 import { Button } from '@mui/material';
+import Posts from '../components/Post/Posts';
+
+
 
 
 
@@ -50,12 +53,12 @@ export default function Home({ products }: Props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <p
+        {/* <p
           className={styles.logout}
           onClick={logout}
         >
           SignOut
-        </p>
+        </p> */}
         <div className={styles.description}>
           <p>
             <code>
@@ -67,7 +70,7 @@ export default function Home({ products }: Props) {
                 ? <><RiToggleLine onClick={toggleBool} className={styles.toggleIcon} /></>
                 : <><RiToggleFill onClick={toggleBool} className={styles.toggleIcon} />
                   <Link href="/account" className={styles.subCode}>pages/account.tsx</Link>
-                  <Link href="/user" className={styles.subCode}>pages/user.tsx</Link></>}
+                  <Link href="/404" className={styles.subCode}>pages/user.tsx</Link></>}
 
 
             </code>
@@ -97,6 +100,7 @@ export default function Home({ products }: Props) {
         {/* <Svg1 className={styles.svg1} />
         <Svg2 className={styles.svg2} /> */}
         <div className={styles.center}>
+          <Posts />
           {/* <Svg3 className={styles.svg3} /> */}
           {/* <Svg5 className={styles.svg5} /> */}
 
@@ -128,7 +132,7 @@ export default function Home({ products }: Props) {
             rel="noopener noreferrer"
           >
             <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
+              Movie <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
               Find in-depth information about Next.js features and&nbsp;API.
@@ -142,7 +146,7 @@ export default function Home({ products }: Props) {
             rel="noopener noreferrer"
           >
             <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
+              Text <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
               Learn about Next.js in an interactive course with&nbsp;quizzes!
@@ -156,7 +160,7 @@ export default function Home({ products }: Props) {
             rel="noopener noreferrer"
           >
             <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
+              Roadmap <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
               Discover and deploy boilerplate example Next.js&nbsp;projects.
@@ -170,7 +174,7 @@ export default function Home({ products }: Props) {
             rel="noopener noreferrer"
           >
             <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
+              Update information <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
               Instantly deploy your Next.js site to a shareable URL

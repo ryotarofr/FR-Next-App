@@ -1,0 +1,67 @@
+.desktop {
+  width: 600px;
+  height: 400px;
+  margin-bottom: 60px;
+}
+
+.tablet {
+  width: 400px;
+  height: 280px;
+  margin-bottom: 60px;
+}
+
+.mobile {
+  width: 280px;
+  height: 180px;
+  margin-bottom: 30px;
+}
+
+.title {
+  letter-spacing: -0.2px;
+  margin-right: 8px;
+  margin-top: 14px;
+  /* min-height: 74px; */
+  width: 100%;
+
+  /* display: -webkit-box; */
+  /* -webkit-box-orient: vertical; */
+  /* -webkit-line-clamp: 2; 制限したい行数が3の場合 */
+  /* overflow: hidden; */
+  /* display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; */
+
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+
+  color: #212121;
+}
+
+.desc {
+  letter-spacing: -0.4px;
+  margin-left: 1.5px;
+  margin-top: 8px;
+  min-height: 38px;
+  width: 100%;
+
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+
+  color: #9e9e9e;
+
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.postDate {
+  font-style: italic;
+  font-size: 10px;
+  color: #9e9e9e;
+}
