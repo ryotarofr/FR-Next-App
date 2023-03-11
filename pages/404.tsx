@@ -5,7 +5,7 @@ import { IoIosArrowBack } from 'react-icons/io';
 export default function FourNotFourPage() {
   const router = useRouter()
   return (
-    <>
+    <div className={styles.wrapper}>
       <div className={styles.back} onClick={() => router.back()}><IoIosArrowBack className={styles.backIcon} />back</div>
       <div className={styles.heading}>
         <div className={styles.flex}>
@@ -14,6 +14,6 @@ export default function FourNotFourPage() {
           <h3 className={styles.h3}>もうしばらくお待ちください🐳</h3>
         </div>
       </div>
-    </>
+    </div>
   )
 }
