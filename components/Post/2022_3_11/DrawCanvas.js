@@ -13,8 +13,6 @@ const DrawCanvas = () => {
   const isTablet = useMediaQuery({ minWidth: 700, maxWidth: 991 });
   const isMobile = useMediaQuery({ maxWidth: 699 });
 
-  console.log(isDesktop, isMobile);
-
   return (
     <>
       <div className={isDesktop ? styles.bgDesktop : null} />
@@ -31,7 +29,7 @@ const DrawCanvas = () => {
         <br />
         <span>WebApp</span>
       </h1>
-      <Canvas linear shadows className={styles.canvasDesktopTablet}>
+      <Canvas linear shadows className={styles.canvas}>
         <fog attach="fog" args={["#272730", 16, 30]} />
         <ambientLight args={["#ffffff", 1]} />
 

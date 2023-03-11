@@ -29,7 +29,7 @@
 
 .borderMobile {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   width: 100%;
 
   border-bottom: solid gainsboro;
@@ -88,10 +88,10 @@
   display: block;
   position: absolute;
   z-index: -1;
-  bottom: 204px;
+  bottom: 200px;
   left: 0;
   width: 280px;
-  height: 180px;
+  height: 150px;
 
   background-color: rgba(0, 0, 0, 0.88);
   filter: blur(15px);

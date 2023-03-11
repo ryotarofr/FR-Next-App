@@ -28,7 +28,7 @@
 
 .bgMobile {
   width: 100%;
-  height: 180px;
+  height: 150px;
   position: absolute;
   border-radius: 10px;
   background: radial-gradient(
@@ -42,8 +42,7 @@
 
 @import url("https://rsms.me/inter/inter.css");
 
-/* .bg, */
-.canvasDesktopTablet {
+.canvas {
   position: relative;
   bottom: 47px;
   margin: 0;
@@ -56,17 +55,6 @@
   background: #171717;
   font-family: "Inter var", sans-serif;
 }
-
-/* .bg {
-  position: absolute;
-  background: radial-gradient(
-    at 50% 100%,
-    #873740 0%,
-    #272730 40%,
-    #171720 80%,
-    #070710 100%
-  );
-} */
 
 .h1 {
   position: relative;

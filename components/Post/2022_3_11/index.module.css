@@ -41,7 +41,7 @@
   content: "";
   display: inline-block;
   width: 3px;
-  height: 142px;
+  height: 136px;
   background-color: #000000;
   position: absolute;
   top: -2px;
@@ -70,7 +70,7 @@
   content: "";
   display: inline-block;
   width: 3px;
-  height: 150px;
+  height: 128px;
   background-color: #000000;
   position: absolute;
   top: -2px;
@@ -79,7 +79,7 @@
 
 .wrapperMobile:hover {
   padding-top: 4px;
-  padding-bottom: 20px;
+  padding-bottom: 4px;
   padding-right: 6px;
   background-color: #00000010;
   border-radius: 8px;
@@ -99,7 +99,7 @@
 
 .mobile {
   width: 280px;
-  height: 180px;
+  height: 150px;
   margin-bottom: 110px;
 }
 
