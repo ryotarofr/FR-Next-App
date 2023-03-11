@@ -4,10 +4,6 @@ import DrawCanvas from './DrawCanvas';
 import Link from 'next/link';
 
 
-
-
-
-
 const Post1 = () => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
   const isTablet = useMediaQuery({ minWidth: 640, maxWidth: 991 });
