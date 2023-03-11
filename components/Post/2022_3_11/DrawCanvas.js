@@ -31,7 +31,7 @@ const DrawCanvas = () => {
         <br />
         <span>WebApp</span>
       </h1>
-      <Canvas linear shadows className={styles.canvas}>
+      <Canvas linear shadows className={styles.canvasDesktopTablet}>
         <fog attach="fog" args={["#272730", 16, 30]} />
         <ambientLight args={["#ffffff", 1]} />
 

@@ -1,0 +1,110 @@
+.postWrapper {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px #00004c;
+  height: 400px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.flex_col {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 398px;
+  width: 300px;
+}
+
+.thumbnail {
+  align-items: flex-end;
+  background-color: #eeeeee;
+  display: flex;
+  height: 216px;
+  margin-left: 0;
+  overflow: hidden;
+  /* position: relative; */
+  width: 300px;
+}
+
+.title {
+  letter-spacing: -0.2px;
+  margin-right: 8px;
+  margin-top: 16px;
+  min-height: 74px;
+  width: 258px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 制限したい行数が3の場合 */
+  overflow: hidden;
+
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+
+  color: #212121;
+}
+
+.desc {
+  letter-spacing: -0.4px;
+  margin-left: 1.5px;
+  margin-top: 8px;
+  min-height: 38px;
+  width: 260px;
+
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+
+  color: #9e9e9e;
+
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.postMenu {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  margin-right: 2px;
+  margin-top: 3px;
+  min-width: 30px;
+  padding: 8px 12px;
+
+  font-family: "Hiragino Kaku Gothic Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+
+  color: #424242;
+}
+
+.postIcons {
+  align-items: flex-start;
+  display: flex;
+  gap: 20px;
+  margin-left: 70px;
+  /* position: relative; */
+  width: fit-content;
+}
+
+.icon_favorite {
+  height: 20px;
+  min-width: 20px;
+}
+
+.icon_clockcircle {
+  height: 20px;
+  min-width: 20px;
+}
+
+.icon_options {
+  height: 20px;
+  min-width: 20px;
+}

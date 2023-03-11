@@ -30,26 +30,29 @@ const Post1 = () => {
       </div>}
       {isTablet && <div className={styles.tablet}>
         <DrawCanvas />
-        <div className={styles.post}>
+        <Link href="/post/1" className={styles.post}>
 
           <h2 className={styles.title}>
-            タイトル
+            Welcome to FR App !!!!!!!!!🚀🎉🎉🎉
           </h2>
           <div className={styles.desc}>
-            文がいくつか集まり、かつ、まとまった内容を表すもの。内容のうえで前の文と密接な関係をもつと考えられる文は、そのまま続いて書き継がれ、前の文と隔たりが意識されたとき、次の文は行を改めて書かれる。
+            まずは
           </div>
-        </div>
+          <div className={styles.postDate}>2022/01/11</div>
+        </Link>
       </div>}
       {isMobile && <div className={styles.mobile}>
         <DrawCanvas />
-        <div className={styles.post}>
+        <Link href="/post/1" className={styles.post}>
+
           <h2 className={styles.title}>
-            タイトル
+            Welcome to FR App !!!!!!!!!🚀🎉🎉🎉
           </h2>
           <div className={styles.desc}>
-            文がいくつか集まり、かつ、まとまった内容を表すもの。内容のうえで前の文と密接な関係をもつと考えられる文は、そのまま続いて書き継がれ、前の文と隔たりが意識されたとき、次の文は行を改めて書かれる。
+            まずは
           </div>
-        </div>
+          <div className={styles.postDate}>2022/01/11</div>
+        </Link>
       </div>}
     </>
   )

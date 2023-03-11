@@ -13,13 +13,18 @@
 .mobile {
   width: 280px;
   height: 180px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
+}
+
+.post {
+  position: relative;
+  bottom: 40px;
 }
 
 .title {
   letter-spacing: -0.2px;
   margin-right: 8px;
-  margin-top: 14px;
+  /* margin-top: 14px; */
   /* min-height: 74px; */
   width: 100%;
 
@@ -43,7 +48,7 @@
 .desc {
   letter-spacing: -0.4px;
   margin-left: 1.5px;
-  margin-top: 8px;
+  margin-top: 4px;
   min-height: 38px;
   width: 100%;
 

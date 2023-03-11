@@ -43,7 +43,9 @@
 @import url("https://rsms.me/inter/inter.css");
 
 /* .bg, */
-.canvas {
+.canvasDesktopTablet {
+  position: relative;
+  bottom: 47px;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -67,20 +69,16 @@
 } */
 
 .h1 {
-  position: absolute;
-  top: 120px;
-  left: 60px;
+  position: relative;
+  top: 34px;
+  left: 24px;
   font-weight: 900;
-  font-size: 24px;
+  font-size: 16px;
   margin: 0;
   color: rgb(255, 60, 0);
-  /* line-height: 0.6em; */
-  /* letter-spacing: -2px; */
+  line-height: 1.4rem;
+  letter-spacing: 2px;
   text-align: left;
-}
-
-.h1 > span {
-  white-space: pre;
 }
 
 .layer {
