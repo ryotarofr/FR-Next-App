@@ -10,8 +10,8 @@ const Model = dynamic(() => import("../2022_3_11/Model"));
 
 const DrawCanvas = () => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
-  const isTablet = useMediaQuery({ minWidth: 640, maxWidth: 991 });
-  const isMobile = useMediaQuery({ maxWidth: 639 });
+  const isTablet = useMediaQuery({ minWidth: 700, maxWidth: 991 });
+  const isMobile = useMediaQuery({ maxWidth: 699 });
 
   console.log(isDesktop, isMobile);
 

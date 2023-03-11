@@ -97,7 +97,7 @@ const LoginPage = () => {
 
             </div>
           </form>
-          <div className={styles.h1}>Sign In</div>
+          {/* <div className={styles.h1}>Sign In</div> */}
           <AiFillGithub className={styles.providerButton} onClick={signInWithGithub} />
           <FcGoogle className={styles.providerButton} onClick={signInWithGoogle} />
           {/* <LoginButton className={styles.providerButton} type="button" onClick={signInWithGithub}><AiFillGithub onClick={signInWithGithub} /></LoginButton> */}

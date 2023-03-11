@@ -1,5 +1,4 @@
 import { useFBX } from "@react-three/drei";
-import { useMediaQuery } from "react-responsive";
 
 const Model = () => {
   const fbx = useFBX("rocket.fbx");
