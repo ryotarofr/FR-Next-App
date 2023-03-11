@@ -1,6 +1,7 @@
 .wrapper {
   width: 100vw;
   height: 100vh;
+  background-color: whitesmoke;
 }
 
 .back {
@@ -21,8 +22,8 @@
 
 .heading {
   display: flex;
+  height: 100%;
   align-items: center;
-  background-color: whitesmoke;
 }
 
 .flex {
