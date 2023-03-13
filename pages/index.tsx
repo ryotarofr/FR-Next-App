@@ -22,16 +22,17 @@ import Posts from '../components/Post/Posts';
 
 
 
-
+// 
 
 const inter = Inter({ subsets: ['latin'] })
-
 
 interface Props {
   products: Product[]
 }
 
 export default function Home({ products }: Props) {
+
+
   const [pageToggle, setPageToggle] = useState<Boolean>(false)
   const toggleBool = () => setPageToggle(!pageToggle)
 
@@ -101,6 +102,9 @@ export default function Home({ products }: Props) {
         <Svg2 className={styles.svg2} /> */}
         <div className={styles.center}>
           <Posts />
+
+
+
           {/* <Svg3 className={styles.svg3} /> */}
           {/* <Svg5 className={styles.svg5} /> */}
 

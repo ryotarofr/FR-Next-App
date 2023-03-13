@@ -20,7 +20,7 @@
 }
 .wrapperDesktop:hover {
   padding-top: 4px;
-  padding-bottom: 15px;
+  /* padding-bottom: 0px; */
   padding-right: 6px;
   background-color: #00000010;
   border-radius: 10px;
@@ -50,7 +50,7 @@
 
 .wrapperTablet:hover {
   padding-top: 4px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   padding-right: 6px;
   background-color: #00000010;
   border-radius: 8px;
@@ -79,7 +79,7 @@
 
 .wrapperMobile:hover {
   padding-top: 4px;
-  padding-bottom: 4px;
+  /* padding-bottom: 4px; */
   padding-right: 6px;
   background-color: #00000010;
   border-radius: 8px;

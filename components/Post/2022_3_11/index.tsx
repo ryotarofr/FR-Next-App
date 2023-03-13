@@ -13,7 +13,7 @@ const Post1 = () => {
       {isDesktop && <div className={styles.desktop}>
         {/* <div className={styles.flex}> */}
         <DrawCanvas />
-        <Link href="/post/1" className={styles.wrapperDesktop}>
+        <Link href="/posts/aws-quickstart" className={styles.wrapperDesktop}>
 
           <span className={styles.titleDesktop}>
             Welcome to FR App
