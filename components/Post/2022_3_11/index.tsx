@@ -30,7 +30,7 @@ const Post1 = () => {
       </div>}
       {isTablet && <div className={styles.tablet}>
         <DrawCanvas />
-        <Link href="/post/1" className={styles.wrapperTablet}>
+        <Link href="/posts/aws-quickstart" className={styles.wrapperTablet}>
 
           <span className={styles.titleTablet}>
             Welcome to FR App !!!!!!!!!
@@ -47,7 +47,7 @@ const Post1 = () => {
       {isMobile && <div className={styles.mobile}>
         <div>
           <DrawCanvas />
-          <Link href="/post/1" className={styles.wrapperMobile}>
+          <Link href="/posts/aws-quickstart" className={styles.wrapperMobile}>
 
             <span className={styles.titleMobile}>
               Welcome to FR App
